@@ -9,7 +9,7 @@ app.get('/', (req: Request, res: Response) => {
 app.get('/:id', (req: Request, res: Response) => {
   const id = req.params.id
   console.log(id);
-  res.send('Hello New World!!!!!X' + id)
+  res.send('Hello New World!' + id)
 })
 
 app.post('/', (req: Request, res: Response) => {
