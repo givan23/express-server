@@ -10,7 +10,7 @@
     "build": "npm-run-all clean build:compile",
     "build:compile": "npx babel src --extensions .ts --out-dir build --source-maps",
     "build:types": "tsc",
-    "dev": "concurrently npm:dev:* --kill-others \"nodemon --exec node build/index.js\"",
+    "dev": "concurrently npm:dev:compile --kill-others \"nodemon --exec node build/index.js\"",
     "dev:compile": "npx babel src --extensions .ts --out-dir build --source-maps --watch",
     "dev:types": "tsc --watch",
     "prettier": "prettier --write \"src/**/*.ts\"",
